@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main
+ * main - Combination of three digits
  *
  * Return: Always 0
  */
