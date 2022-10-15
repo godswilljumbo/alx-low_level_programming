@@ -8,11 +8,11 @@ int main(void)
 {
 	int y1, y2, y3;
 
-	for (y1 = 0; y1 < 7; y1++)
+	for (y1 = 0; y1 < 8; y1++)
 	{
-		for (y2 = y1 + 1; y2 < 8; y2++)
+		for (y2 = y1 + 1; y2 < 9; y2++)
 		{
-			for (y3 = y2 + 1; y3 + 9; y3++)
+			for (y3 = y2 + 1; y3 + 10; y3++)
 			{
 				putchar((y1 % 10) + '0');
 				putchar((y2 % 10) + '0');
