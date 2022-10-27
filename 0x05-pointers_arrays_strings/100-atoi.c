@@ -2,7 +2,7 @@
 /**
  * _atoi - function
  * @s: string
- * Return: converted integer
+ * Return: integer
  */
 int _atoi(char *s)
 {
@@ -15,7 +15,7 @@ int _atoi(char *s)
 	while (!(s[i] <= '9' && s[i] >= '0') && s[i] != '\0')
 	{
 		if (s[i] == '-')
-			sign *= 1;
+			sign *= -1;
 		i++;
 	}
 	while (s[i] <= '9' && (s[i] >= '0' && s[i] != '\0'))
