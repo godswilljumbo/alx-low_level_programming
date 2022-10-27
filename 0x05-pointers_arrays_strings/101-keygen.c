@@ -1,9 +1,15 @@
-#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 #include <time.h>
 
-void randomPasswordGeneration(int N)
+/**
+ * main - function
+ *
+ * Return: Always 0
+ */
+
+int main(void)
 {
 	int g = 0;
 
@@ -17,13 +23,13 @@ void randomPasswordGeneration(int N)
 
 	char LETTER[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-	char symbols[] = "?!&%*@$^€¥_";
+	char symbols[] = "?!&%*@$^";
 
-	char password[N];
+	char password[12];
 
 	randomizer = rand () % 4;
 
-	for (g = 0; g < N; g++)
+	for (g = 0; g < 12; g++)
 	{
 		if (randomizer == 1)
 		{
@@ -39,7 +45,7 @@ void randomPasswordGeneration(int N)
 		}
 		else if (randomizer == 3)
 		{
-			password[g] = symbols[rand() % 11];
+			password[g] = symbols[rand() % 8];
 			randomizer = rand() % 4;
 			printf("%c", password[g]);
 		}
@@ -50,13 +56,5 @@ void randomPasswordGeneration(int N)
 			printf("%c", password[g]);
 		}
 	}
-}
-
-int main()
-{
-	int N = 10;
-
-	randomPasswordGeneration(N);
-
 	return (0);
 }
