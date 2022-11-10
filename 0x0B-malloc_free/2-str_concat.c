@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 /**
  * *str_concat - Function
@@ -8,21 +9,21 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int g = 0, j = 0;
+	int g1 = 0, g2 = 0;
 	char *gj;
 
 	while (s1 && *s1++)
-		g++;
+		g1++;
 	while (s2 && *s2++)
-		j++;
-	gj = malloc(sizeof(char) * (g + j + 1));
+		g2++;
+	gj = malloc(sizeof(char) * (g1 + g2 + 1));
 	if (!gj)
 		return (NULL);
-	gj += g + j;
+	gj += g1 + g2;
 	*gj = '\0';
-	for (; s2--; j++)
+	for (s2--; g2++;)
 		*--gj = *--s2;
-	for (; s1--; g++)
+	for (s1--; g1++;)
 		*--gj = *--s1;
 	return (gj);
 }
