@@ -1,16 +1,18 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 /**
  * malloc_checked - function
- * @g: memory
+ * @b: memory
  * Return: pointer to memory
  */
-void *malloc_checked(unsigned int g)
+void *malloc_checked(unsigned int b)
 {
-	void *p;
+	int *op;
 
-	p = malloc(g);
-	if (p == NULL)
+	op = malloc(b);
+	if (op == NULL)
 		exit(98);
-	return (0);
+	return (op);
 }
