@@ -1,22 +1,6 @@
 #include "lists.h"
 #include <stdlib.h>
 #include <string.h>
-
-/**
- * _strlen - finds length of string
- * @str: string
- * Return: length of string
- */
-
-unsigned int _strlen(char *str)
-{
-	unsigned int g;
-	
-	for (g = 0; str[g]; g++)
-		;
-	return (g);
-}
-
 /**
  * add_node_end - function
  * @head: pointer
@@ -33,7 +17,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	while (str[len])
 		len++;
 	add = malloc(sizeof(list_t));
-	if(!add)
+	if (!add)
 		return (NULL);
 	add->str = strdup(str);
 	add->len = len;
