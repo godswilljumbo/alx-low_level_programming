@@ -3,6 +3,21 @@
 #include <string.h>
 
 /**
+ * _strlen - finds length of string
+ * @str: string
+ * Return: length of string
+ */
+
+unsigned int _strlen(char *str)
+{
+	unsigned int g;
+	
+	for (g = 0; str[g]; g++)
+		;
+	return (g);
+}
+
+/**
  * add_node_end - function
  * @head: pointer
  * @str: string
