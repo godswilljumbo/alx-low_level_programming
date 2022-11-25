@@ -8,15 +8,17 @@
 
 size_t print_list(const list_t *h)
 {
-	unsigned long int g = 0;
+	unsigned int g;
+	const list_t *don;
 
-	while (h != NULL)
+	don = h;
+	for (g = 0; don != NULL; g++)
 	{
-		if (h->str == NULL)
+		if (don->str == NULL)
 			printf("[0] (nil)");
 		else
-			printf("[%d] %s\n", h->len, h->str);
-		h = h->next;
+			printf("[%d] %s\n", don->len, don->str);
+		don = don->next;
 		g++;
 	}
 	return (g);
