@@ -8,7 +8,7 @@
 
 size_t print_list(const list_t *h)
 {
-	unsigned int g;
+	unsigned long int g;
 	const list_t *don;
 
 	don = h;
@@ -17,7 +17,7 @@ size_t print_list(const list_t *h)
 		if (don->str == NULL)
 			printf("[0] (nil)");
 		else
-			printf("[%u] %s\n", don->len, don->str);
+			printf("[%d] %s\n", don->len, don->str);
 		don = don->next;
 	}
 	return (g);
