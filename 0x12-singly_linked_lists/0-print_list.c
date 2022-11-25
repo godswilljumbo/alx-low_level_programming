@@ -1,5 +1,5 @@
 #include "lists.h"
-
+#include <stdio.h>
 /**
  * print_list - function
  * @h: pointer
@@ -8,7 +8,7 @@
 
 size_t print_list(const list_t *h)
 {
-	unsigned long int nod = 0;
+	unsigned long int g = 0;
 
 	while (h != NULL)
 	{
@@ -17,7 +17,7 @@ size_t print_list(const list_t *h)
 		else
 			printf("[%d] %s\n", h->len, h->str);
 		h = h->next;
-		nod++;
+		g++;
 	}
-	return (nod);
+	return (g);
 }
